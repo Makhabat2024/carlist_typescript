@@ -1,0 +1,59 @@
+.CardItem {
+	width: 550px;
+	max-width: 100%;
+	padding-block: 20px;
+	padding-inline: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	background-color: crimson;
+	img {
+		width: 250px;
+		height: 250px;
+		max-width: 100%;
+
+		&.completed {
+			filter: grayscale(1);
+		}
+	}
+	.carInfo {
+		width: 250px;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		gap: 10px;
+
+		&.completed {
+			color: #3d3737;
+		}
+		span {
+			font-weight: bold;
+			color: rgb(12, 12, 12);
+		}
+		p {
+			font-size: 16px;
+		}
+		.buttons {
+			display: flex;
+			gap: 10px;
+
+			button {
+				border: none;
+				outline: none;
+				padding: 5px 10px;
+				border-radius: 10px;
+				background: transparent;
+				border: 1px solid #e9e3e3;
+				font-weight: bold;
+			}
+			button:hover {
+				cursor: pointer;
+				opacity: 0.5;
+			}
+		}
+	}
+}
