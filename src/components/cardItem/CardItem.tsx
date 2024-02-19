@@ -19,7 +19,7 @@ const CardItem: FC<CardItemProps> = ({ item, deleteCard, toggleCard }) => {
 					<span>Name:</span> {item.name}
 				</h3>
 				<h4>
-					<span>Price:</span> {item.price}
+					<span>Price:</span> {item.price}$
 				</h4>
 				<p>
 					<span>Description:</span> {item.description}
