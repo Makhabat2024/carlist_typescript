@@ -20,21 +20,25 @@ const CardForm: FC<TodoInputProps> = ({
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const newCar: CardType = {
-			name,
-			img,
-			price,
-			description,
-			// _id: nextId,
-			completed: false,
-			_id: Math.random() + 1,
-		};
-		postData(newCar as CardType);
-		setName("");
-		setImg("");
-		setPrice(0);
-		setDescription("");
-		// setNextId((prevId) => prevId + 1);
+		if (img.trim() !== "" && name.trim() !== "" && description.trim() !== "") {
+			const newCar: CardType = {
+				name,
+				img,
+				price,
+				description,
+				// _id: nextId,
+				completed: false,
+				_id: Math.random() + 1,
+			};
+			postData(newCar as CardType);
+			setName("");
+			setImg("");
+			setPrice(0);
+			setDescription("");
+			// setNextId((prevId) => prevId + 1);
+		} else {
+			alert("Please enter your car.");
+		}
 	};
 	// ----------------------------------------------------------
 	return (
